@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <title>Document</title>
+</head>
+<body>
+  <form action="http://localhost:3000/api/fileUpSingle" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="file" value="" multiple="multiple" />
+    <input type="text" name="username" value="" placeholder="姓名">
+    <input type="submit" value="提交" />
+  </form>
+  <script>
+    document.querySelector('#file').onchange = function() {
+      console.log(this.files)
+    }
+  </script>
+</body>
+</html>
